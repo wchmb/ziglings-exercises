@@ -2,8 +2,8 @@
 // The Zig language is in rapid development and continuously
 // improves the language constructs. Ziglings evolves with it.
 //
-// Until version 0.11, Zig's 'for' loops did not directly
-// replicate the functionality of the C-style: "for(a;b;c)"
+// Until version 0.11, Zig's 'for' loops did not have
+// similar functionality of the C-style: "for(a;b;c)"
 // which are so well suited for iterating over a numeric
 // sequence.
 //
@@ -29,6 +29,9 @@
 //     1..4  is a range from 1 to 3
 //
 // At the moment, ranges are only supported in 'for' loops.
+//
+// Still C-style: "for(a;b;c)" allows for more flexibility, like multiple
+// counters, different step amount, etc.
 //
 // Perhaps you recall Exercise 13? We were printing a numeric
 // sequence like so:
