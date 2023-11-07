@@ -281,7 +281,7 @@ const ZiglingStep = struct {
 
     fn run(self: *ZiglingStep, exe_path: []const u8, _: *std.Progress.Node) !void {
         resetLine();
-        print("Checking {s}\n", .{self.exercise.main_file});
+        print("Checking: {s}\n", .{self.exercise.main_file});
 
         const b = self.step.owner;
 
@@ -376,7 +376,7 @@ const ZiglingStep = struct {
     }
 
     fn compile(self: *ZiglingStep, prog_node: *std.Progress.Node) !?[]const u8 {
-        print("Compiling {s}\n", .{self.exercise.main_file});
+        print("Compiling: {s}\n", .{self.exercise.main_file});
 
         const b = self.step.owner;
         const exercise_path = self.exercise.main_file;
@@ -839,7 +839,7 @@ const exercises = [_]Exercise{
     },
     .{
         .main_file = "060_floats.zig",
-        .output = "Shuttle liftoff weight: 1995796kg",
+        .output = "Shuttle liftoff weight: 2032092kg",
     },
     .{
         .main_file = "061_coercions.zig",
