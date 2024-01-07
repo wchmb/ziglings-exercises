@@ -48,22 +48,33 @@ pub fn main() void {
     // And here's a zero-terminated many-item pointer:
     const ptr: [*:0]u32 = &nums;
 
-    // For fun, let's replace the value at position 3 with the
-    // sentinel value 0. This seems kind of naughty.
-    nums[3] = 0;
+    // Just to show not everything must be zero-terminated, here
+    // is a space-terminated array of u8 values 👾:
+    var space = [_:' ']u8{ '0', '1', '2', '3', '4', '5' };
 
-    // So now we have a zero-terminated array and a many-item
-    // pointer that reference the same data: a sequence of
-    // numbers that both ends in and CONTAINS the sentinel value.
+    // And here's a space-terminated many-item pointer:
+    const spaceptr: [*:' ']u8 = &space;
+
+    // For fun, let's replace the value at position 3 with the
+    // sentinel value. This seems kind of naughty.
+    nums[3] = 0;
+    space[3] = ' ';
+
+    // Now we have a zero-terminated array, a space-terminated
+    // array, and a couple of many-item pointers that reference
+    // the same data: sequences of numbers that both end in and
+    // CONTAIN the sentinel value.
     //
     // Attempting to loop through and print both of these should
     // demonstrate how they are similar and different.
     //
     // (It turns out that the array prints completely, including
-    // the sentinel 0 in the middle. The many-item pointer stops
+    // the sentinel in the middle. The many-item pointer stops
     // at the first sentinel value.)
     printSequence(nums);
     printSequence(ptr);
+    printSequence(space);
+    printSequence(spaceptr);
 
     print("\n", .{});
 }
@@ -79,27 +90,27 @@ fn printSequence(my_seq: anytype) void {
     // depending on which type of my_seq was passed in:
     switch (my_typeinfo) {
         .Array => {
-            print("Array:", .{});
+            print("Array:[", .{});
 
             // Loop through the items in my_seq.
             for (???) |s| {
-                print("{}", .{s});
+                print(" {x}", .{s});
             }
         },
         .Pointer => {
             // Check this out - it's pretty cool:
             const my_sentinel = sentinel(@TypeOf(my_seq));
-            print("Many-item pointer:", .{});
+            print("Many-item pointer:[", .{});
 
             // Loop through the items in my_seq until we hit the
             // sentinel value.
             var i: usize = 0;
             while (??? != my_sentinel) {
-                print("{}", .{my_seq[i]});
+                print(" {x}", .{my_seq[i]});
                 i += 1;
             }
         },
         else => unreachable,
     }
-    print(". ", .{});
+    print(" ]. ", .{});
 }
