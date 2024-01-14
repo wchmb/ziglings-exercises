@@ -1013,7 +1013,7 @@ const exercises = [_]Exercise{
     },
     .{
         .main_file = "095_for3.zig",
-        .output = "1 2 4 7 8 11 13 14 16 17 19",
+        .output = "3628800",
     },
     .{
         .main_file = "096_memory_allocation.zig",
