@@ -913,7 +913,7 @@ const exercises = [_]Exercise{
     },
     .{
         .main_file = "076_sentinels.zig",
-        .output = "Array:[ 1 2 3 0 5 6 ]. Many-item pointer:[ 1 2 3 ]. Array:[ 30 31 32 20 34 35 ]. Many-item pointer:[ 30 31 32 ].",
+        .output = "Array:[ 1 2 3 0 5 6 ]. Many-item pointer:[ 1 2 3 ]. Array:[ 5 4 3 ffff 1 0 ]. Many-item pointer:[ 5 4 3 ].",
     },
     .{
         .main_file = "077_sentinels2.zig",

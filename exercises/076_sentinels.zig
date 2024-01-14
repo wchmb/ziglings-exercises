@@ -49,21 +49,22 @@ pub fn main() void {
     const ptr: [*:0]u32 = &nums;
 
     // Just to show not everything must be zero-terminated, here
-    // is a space-terminated array of u8 values 👾:
-    var space = [_:' ']u8{ '0', '1', '2', '3', '4', '5' };
+    // is max-value termination (bits are all ones, which can be
+    // interpereted as a -1 for a signed number type):
+    var morenums = [_:0xFFFF]u16{ 5, 4, 3, 2, 1, 0 };
 
-    // And here's a space-terminated many-item pointer:
-    const spaceptr: [*:' ']u8 = &space;
+    // And here's a max-value terminated many-item pointer:
+    const morenumsptr: [*:0xFFFF]u16 = &morenums;
 
     // For fun, let's replace the value at position 3 with the
     // sentinel value. This seems kind of naughty.
     nums[3] = 0;
-    space[3] = ' ';
+    morenums[3] = 0xFFFF;
 
-    // Now we have a zero-terminated array, a space-terminated
-    // array, and a couple of many-item pointers that reference
-    // the same data: sequences of numbers that both end in and
-    // CONTAIN the sentinel value.
+    // Now we have a zero-terminated array, a max-value
+    // terminated array, and a couple of many-item pointers
+    // that reference the same data: sequences of numbers that
+    // both end in and CONTAIN the sentinel value.
     //
     // Attempting to loop through and print both of these should
     // demonstrate how they are similar and different.
@@ -73,8 +74,8 @@ pub fn main() void {
     // at the first sentinel value.)
     printSequence(nums);
     printSequence(ptr);
-    printSequence(space);
-    printSequence(spaceptr);
+    printSequence(morenums);
+    printSequence(morenumsptr);
 
     print("\n", .{});
 }
