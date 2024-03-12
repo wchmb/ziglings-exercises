@@ -1,11 +1,9 @@
 //
-// One of the more common uses of 'comptime' function parameters is
-// passing a type to a function:
+// In Zig types are first class values
 //
-//     fn foo(comptime MyType: type) void { ... }
+//     fn foo(MyType: type) void { ... }
 //
-// In fact, types are ONLY available at compile time, so the
-// 'comptime' keyword is required here.
+// Types are resolved at compile time.
 //
 // Please take a moment to put on the wizard hat which has been
 // provided for you. We're about to use this ability to implement
@@ -42,7 +40,7 @@ pub fn main() void {
 //     2) Sets the size of the array of type T (which is the
 //        sequence we're creating and returning).
 //
-fn makeSequence(comptime T: type, ??? size: usize) [???]T {
+fn makeSequence(T: type, ??? size: usize) [???]T {
     var sequence: [???]T = undefined;
     var i: usize = 0;
 

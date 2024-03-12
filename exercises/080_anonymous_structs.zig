@@ -31,7 +31,7 @@ const print = @import("std").debug.print;
 // This function creates a generic data structure by returning an
 // anonymous struct type (which will no longer be anonymous AFTER
 // it's returned from the function).
-fn Circle(comptime T: type) type {
+fn Circle(T: type) type {
     return struct {
         center_x: T,
         center_y: T,
