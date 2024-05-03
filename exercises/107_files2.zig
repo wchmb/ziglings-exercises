@@ -5,7 +5,7 @@
 //      with content `It's zigling time!`(18 byte total)
 //
 // Now there no point in writing to a file if we don't read from it am I right?
-// let's wrote a program to read the content of the file that we just created.
+// let's write a program to read the contents of the file we just created.
 //
 // I am assuming you've created the appropriate files for this to work.
 //
@@ -37,10 +37,10 @@ pub fn main() !void {
     // this should print out : `AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
     std.debug.print("{s}\n", .{content});
 
-    // okay, seem like threat of violence is not the answer in this case
+    // okay, seems like threats of violence are not the answer in this case
     // can you go here to find a way to read the content ?
     // https://ziglang.org/documentation/master/std/#std.fs.File
-    // hint: you might find two answer that are both vaild in this case
+    // hint: you might find two answers that are both vaild in this case
     const byte_read = zig_read_the_file_or_i_will_fight_you(&content);
 
     // Woah, too screamy, I know you're excited for zigling time but tone it down a bit

@@ -1,4 +1,5 @@
-//
+// WARNING: AS OF Zig 0.13.x Async is no longer supported.
+// Until further notice skip to #092_interfaces.zig
 // Six Facts:
 //
 // 1. The memory space allocated to your program for the

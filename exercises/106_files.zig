@@ -2,15 +2,15 @@
 // Until now, we've only been printing our output in the console,
 // which is good enough for fighting alien and hermit bookkeeping.
 //
-// However, many other task require some interaction with the file system,
+// However, many other tasks require some interaction with the file system,
 // which is the underlying structure for organizing files on your computer.
 //
 // The File System provide a hierarchical structure for storing files
 // by organizing files into directories, which hold files and other directories,
-// thus creating a tree structure for navigating.
+// thus creating a tree-like structure for navigating.
 //
-// Fortunately, zig standard library provide a simple api for interacting
-// with the file system, see the detail documentation here
+// Fortunately, the zig standard library provides a simple API for interacting
+// with the file system, to learn more, see the detailed documentation here
 //
 // https://ziglang.org/documentation/master/std/#std.fs
 //
@@ -29,7 +29,7 @@ pub fn main() !void {
     // then we'll try to make a new directory /output/
     // to put our output files.
     cwd.makeDir("output") catch |e| switch (e) {
-        // there are chance you might want to run this
+        // there is a chance you might want to run this
         // program more than once and the path might already
         // been created, so we'll have to handle this error
         // by doing nothing
