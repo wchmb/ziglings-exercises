@@ -1,5 +1,5 @@
 //
-// Bit manipulations is a very powerful tool just also from Zig.
+// Bit manipulation is a very powerful tool that Zig also supports.
 // Since the dawn of the computer age, numerous algorithms have been
 // developed that solve tasks solely by moving, setting, or logically
 // combining bits.
@@ -8,9 +8,9 @@
 // functions where possible. And it is often possible with calculations
 // based on integers.
 //
-// Often it is not easy to understand at first glance what exactly these
+// Often it is not easy to understand at first glance exactly what these
 // algorithms do when only "numbers" in memory areas change outwardly.
-// But it must never be forgotten that the numbers only represent the
+// But it cannot be forgotten that the numbers only represent the
 // interpretation of the bit sequences.
 //
 // Quasi the reversed case we have otherwise, namely that we represent
@@ -35,8 +35,8 @@
 //          const res5 = numOne ^ numTwo; //   =  1111 1010 - xor
 //
 //
-// To familiarize ourselves with bit manipulation, we start with a simple
-// but often underestimated function and then add other exercises in
+// To familiarize ourselves with bit manipulation, let's start with a simple
+// but often underestimated function and then add other exercises in a
 // loose order.
 //
 // The following text contains excerpts from Wikipedia.
@@ -63,8 +63,8 @@
 //                        y := temp
 //
 // However, with integers we can also achieve the swap function simply by
-// bit manipulation. To do this, the variables are mutually linked with xor
-// and the result is the same.
+// using bit manipulation. To do this, the variables are mutually linked with 
+// xor and the result is the same.
 
 const std = @import("std");
 const print = std.debug.print;

@@ -1,12 +1,12 @@
 //
 // A big advantage of Zig is the integration of its own test system.
 // This allows the philosophy of Test Driven Development (TDD) to be
-// implemented perfectly. Zig even goes one step further than other
-// languages, the tests can be included directly in the source file.
+// implemented easily. Zig even goes one step further than other
+// languages, in that the tests can be included directly in the source file.
 //
 // This has several advantages. On the one hand it is much clearer to
-// have everything in one file, both the source code and the associated
-// test code. On the other hand, it is much easier for third parties
+// have both the source code and the associated test code in one file.
+// On the other hand, it is much easier for third parties
 // to understand what exactly a function is supposed to do if they can
 // simply look at the test inside the source and compare both.
 //
@@ -16,7 +16,7 @@
 // illustrate it with a small example including a test.
 //
 // Therefore, in this exercise we will deal with the basics of testing
-// in Zig. Basically, tests work as follows: you pass certain parameters
+// in Zig. Tests work as follows: you pass certain parameters
 // to a function, for which you get a return - the result. This is then
 // compared with the EXPECTED value. If both values match, the test is
 // passed, otherwise an error message is displayed.

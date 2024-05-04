@@ -31,7 +31,7 @@
 //     }
 
 // Instead of a simple integer or a constant sized slice, this
-// program requires a slice to be allocated that is the same size as
+// program requires a slice to be allocated so that is the same size as
 // an input array.
 
 // Given a series of numbers, take the running average. In other

@@ -1,13 +1,13 @@
 //
-// We've seen that the 'for' loop can let us perform some action
+// We've seen that the 'for' loop can let us perform an action
 // for every item in an array or slice.
 //
 // More recently, we discovered that it supports ranges to
 // iterate over number sequences.
 //
 // This is part of a more general capability of the `for` loop:
-// looping over one or more "objects" where an object is an
-// array, slice, or range.
+// looping over one or more "objects" where an object is defined as 
+// an array, slice, or range.
 //
 // In fact, we *did* use multiple objects way back in Exercise
 // 016 where we iterated over an array and also a numeric index.

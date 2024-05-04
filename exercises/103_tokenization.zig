@@ -1,20 +1,21 @@
 //
 // The functionality of the standard library is becoming increasingly
-// important in Zig. First of all, it is helpful to take a look at how
+// important to Zig. First of all, it is helpful to take a look at how
 // the individual functions are implemented. Because this is wonderfully
 // suitable as a template for your own functions. In addition these
-// standard functions are part of the basic configuration of Zig.
+// standard functions are part of the basic configuration and capabilities
+// of Zig.
 //
 // This means that they are always available on every system.
 // Therefore it is worthwhile to deal with them also in Ziglings.
-// It's a great way to learn important skills. For example, it is
+// It's also a great way to learn important skills. For example, it's
 // often necessary to process large amounts of data from files.
 // And for this sequential reading and processing, Zig provides some
 // useful functions, which we will take a closer look at in the coming
 // exercises.
 //
 // A nice example of this has been published on the Zig homepage,
-// replacing the somewhat dusty 'Hello world!
+// replacing the somewhat dusty 'Hello world!'
 //
 // Nothing against 'Hello world!', but it just doesn't do justice
 // to the elegance of Zig and that's a pity, if someone takes a short,

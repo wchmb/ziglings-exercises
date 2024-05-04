@@ -1,16 +1,16 @@
 //
 // When Andrew Kelley announced the idea of a new programming language
 // - namely Zig - in his blog on February 8, 2016, he also immediately
-// stated his ambitious goal: to replace the C language!
+// stated this ambitious goal: to replace the C language!
 //
 // In order to be able to achieve this goal at all, Zig should be
 // as compatible as possible with its "predecessor".
 // Only if it is possible to exchange individual modules in existing
-// C programs without having to use complicated wrappers,
+// C programs without having to use any complicated wrappers,
 // the undertaking has a chance of success.
 //
 // So it is not surprising that calling C functions and vice versa
-// is extremely "smooth".
+// is extremely smooth.
 //
 // To call C functions in Zig, you only need to specify the library
 // that contains said function. For this purpose there is a built-in
