@@ -45,7 +45,6 @@ pub fn main() void {
             Ops.pow => {
                 current_value *= current_value;
             },
-            // No "else" needed! Why is that?
         }
 
         std.debug.print("{} ", .{current_value});
