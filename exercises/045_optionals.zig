@@ -31,7 +31,7 @@ pub fn main() void {
     // integer value from deepThought() OR the number 42:
     const answer: u8 = result;
 
-    std.debug.print("The Ultimate Answer: {}.\n", .{answer});
+    std.debug.print("The Ultimate Answer: {?}.\n", .{answer});
 }
 
 fn deepThought() ?u8 {
