@@ -30,7 +30,7 @@ pub fn main() void {
     var elephantB = Elephant{ .letter = 'B' };
     var elephantC = Elephant{ .letter = 'C' };
 
-    // Link the elephants so that each tail "points" to the next.
+    // The tail of the last elephant is left "pointing" to nothing.
     elephantA.tail = &elephantB;
     elephantB.tail = &elephantC;
 
