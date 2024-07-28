@@ -5,6 +5,10 @@
 //     for (items) |item| {
 //
 //         // Do something with item
+//         // item does not have to be declared. The type of item is determined by 
+//         // the type of the element in the array.
+//         // item is a variable that is equal to the particular element of the array items
+//         // that the loop is currently on.
 //
 //     }
 //
@@ -23,9 +27,5 @@ pub fn main() void {
 
     std.debug.print("The End.\n", .{});
 }
-// Note that 'for' loops also work on things called "slices"
+// Note that 'for' loops also work on things called "slices" and "iterators",
 // which we'll see later.
-//
-// Also note that 'for' loops have recently become more flexible
-// and powerful (two years after this exercise was written).
-// More about that in a moment.
