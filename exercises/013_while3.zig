@@ -8,12 +8,16 @@
 //     while (condition) : (continue expression) {
 //
 //         if (other condition) continue;
-//
+//         more statements;
 //     }
 //
-// The "continue expression" executes every time the loop restarts
-// whether the "continue" statement happens or not.
+// The continue statement causes the rest of the statements in the block {} to be skipped
+// for this iteration of the loop.
 //
+// Then, the "continue expression" is executed and then 
+// the condition is checked again.  If the condition is true, the block executes again.
+//
+
 const std = @import("std");
 
 pub fn main() void {
