@@ -52,8 +52,7 @@ $ zig version
 Clone this repository with Git:
 
 ```
-$ git clone https://ziglings.org
-$ cd ziglings.org
+$ git clone https://ziglings.org && cd ziglings.org
 ```
 
 Then run `zig build` and follow the instructions to begin!
